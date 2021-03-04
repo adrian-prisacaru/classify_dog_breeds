@@ -1,4 +1,22 @@
-# Udacity | Ai Programming with Python Nanodegree
-## Project: Use a Pre-Trained Image CLassifier to indetify dog breeds
+## Udacity | Ai Programming with Python Nanodegree
+### Project: Use a Pre-Trained Image CLassifier to indetify dog breeds
 
-For this image classification task you will be using an image classification application using a deep learning model called a convolutional neural network (often abbreviated as CNN). CNNs work particularly well for detecting features in images like colors, textures, and edges; then using these features to identify objects in the images. You'll use a CNN that has already learned the features from a giant dataset of 1.2 million images called ImageNet. There are different types of CNNs that have different structures (architectures) that work better or worse depending on your criteria. With this project you'll explore the three different architectures (AlexNet, VGG, and ResNet) and determine which is best for your application.
+Check pet images in a folder and determine which ones are dogs
+and what breed using a pre-trained CNN model.
+
+### Instalation
+
+Python version: 3.6.13
+
+Create a new environment with the required python version and run the
+following command:
+
+```shell
+  pip install -r requirements.txt
+```
+
+### Run the program
+
+```shell
+  python check_images.py --dir pet_images --arch vgg --dogfile dognames.txt
+```
