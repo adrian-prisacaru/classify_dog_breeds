@@ -1,5 +1,5 @@
 ## Udacity | Ai Programming with Python Nanodegree
-### Project: Use a Pre-Trained Image CLassifier to indetify dog breeds
+### Project: Use a Pre-Trained Image Classifier to indetify dog breeds
 
 Check pet images in a folder and determine which ones are dogs
 and what breed using a pre-trained CNN model.
