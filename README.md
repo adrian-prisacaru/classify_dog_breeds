@@ -24,5 +24,5 @@ following command:
 ### Run the tests
 
 ```shell
-  pytest test
+  python -m pytest
 ```
