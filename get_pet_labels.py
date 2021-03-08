@@ -18,6 +18,8 @@
 ##
 # Imports python modules
 from os import listdir
+import re
+
 
 def label(filename):
     """
@@ -26,8 +28,13 @@ def label(filename):
     :return: label in all lower case letters
              and with leading and trailing whitespace characters stripped from them
     """
-    test = '([a-zA-Z]*)'
-    return filename.split
+    regex = '([a-zA-Z]*)'
+    # remove file extension
+    name = filename.split('.')[0]
+    words = re.findall(regex, name)
+    words = map(lambda w: w.strip().lower(), words)
+    words = filter(lambda w: bool(w), words)
+    return " ".join(words)
 
 
 # TODO 2: Define get_pet_labels function below please be certain to replace None
@@ -56,5 +63,5 @@ def get_pet_labels(image_dir):
     results_dic = {}
     filenames = listdir(image_dir)
     for filename in filenames:
-        results_dic[filename] = label(filename)
-    return None
+        results_dic[filename] = [label(filename)]
+    return results_dic
