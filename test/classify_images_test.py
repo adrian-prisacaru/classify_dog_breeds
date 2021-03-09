@@ -1,4 +1,3 @@
-import os
 import unittest
 from classify_images import classify_images, compare_labels
 from get_pet_labels import get_pet_labels
