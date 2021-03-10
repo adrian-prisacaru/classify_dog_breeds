@@ -1,0 +1,77 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = alexnet 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:      Labrador_retriever_01.jpg  label:         labrador retriever
+ 2 key:              Coffee_mug_01.jpg  label:                 coffee mug
+ 3 key:      Labrador_retriever_02.jpg  label:         labrador retriever
+ 4 key:                    Wolf_01.jpg  label:                       wolf
+
+     MATCH:
+
+     Labrador_retriever_01.jpg: 
+Real:         labrador retriever   Classifier:             Labrador retriever
+
+ NOT A MATCH:
+
+             Coffee_mug_01.jpg: 
+Real:                 coffee mug   Classifier:                            cup
+
+     Labrador_retriever_02.jpg: 
+Real:         labrador retriever   Classifier:                    triceratops
+
+                   Wolf_01.jpg: 
+Real:                       wolf   Classifier: malamute, malemute, Alaskan malamute
+
+# Total Images 4 # Matches: 1 # NOT Matches: 3
+
+     MATCH:
+
+     Labrador_retriever_01.jpg: 
+Real:         labrador retriever   Classifier:             Labrador retriever  
+PetLabelDog: 1  ClassLabelDog: 1
+
+ NOT A MATCH:
+
+             Coffee_mug_01.jpg: 
+Real:                 coffee mug   Classifier:                            cup  
+PetLabelDog: 0  ClassLabelDog: 0
+
+     Labrador_retriever_02.jpg: 
+Real:         labrador retriever   Classifier:                    triceratops  
+PetLabelDog: 1  ClassLabelDog: 0
+
+                   Wolf_01.jpg: 
+Real:                       wolf   Classifier: malamute, malemute, Alaskan malamute  
+PetLabelDog: 0  ClassLabelDog: 1
+
+# Total Images 4 # Matches: 1 # NOT Matches: 3
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog:  50.0 Pct Corr NOTdog:  50.0  Pct Corr Breed:  50.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog:  50.0 Pct Corr NOTdog:  50.0  Pct Corr Breed:  50.0
+
+
+---- Summary for CNN model alexnet  -----
+Number of images: 4
+Number of dog images: 2
+Number of not dog images: 2
+Percentage of correctly classified as dog: 50.0
+Percentage of correctly classified as not dog: 50.0
+Percentage of correctly classified breeds: 50.0
+Percentage of matching labels: 25.0
+
+Misclassified dogs:
+Labrador_retriever_02.jpg: 'labrador retriever' misclassified as 'triceratops'
+Wolf_01.jpg: 'wolf' misclassified as 'malamute, malemute, Alaskan malamute'
+
+No misclassified breeds
+
+** Total Elapsed Runtime: 0:0:0

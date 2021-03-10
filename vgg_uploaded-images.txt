@@ -1,0 +1,76 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = vgg 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:      Labrador_retriever_01.jpg  label:         labrador retriever
+ 2 key:              Coffee_mug_01.jpg  label:                 coffee mug
+ 3 key:      Labrador_retriever_02.jpg  label:         labrador retriever
+ 4 key:                    Wolf_01.jpg  label:                       wolf
+
+     MATCH:
+
+     Labrador_retriever_01.jpg: 
+Real:         labrador retriever   Classifier:             Labrador retriever
+
+             Coffee_mug_01.jpg: 
+Real:                 coffee mug   Classifier:                     coffee mug
+
+ NOT A MATCH:
+
+     Labrador_retriever_02.jpg: 
+Real:         labrador retriever   Classifier:                        gazelle
+
+                   Wolf_01.jpg: 
+Real:                       wolf   Classifier: timber wolf, grey wolf, gray wolf, Canis lupus
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
+
+     MATCH:
+
+     Labrador_retriever_01.jpg: 
+Real:         labrador retriever   Classifier:             Labrador retriever  
+PetLabelDog: 1  ClassLabelDog: 1
+
+             Coffee_mug_01.jpg: 
+Real:                 coffee mug   Classifier:                     coffee mug  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+     Labrador_retriever_02.jpg: 
+Real:         labrador retriever   Classifier:                        gazelle  
+PetLabelDog: 1  ClassLabelDog: 0
+
+                   Wolf_01.jpg: 
+Real:                       wolf   Classifier: timber wolf, grey wolf, gray wolf, Canis lupus  
+PetLabelDog: 0  ClassLabelDog: 0
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog:  50.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  50.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog:  50.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  50.0
+
+
+---- Summary for CNN model vgg  -----
+Number of images: 4
+Number of dog images: 2
+Number of not dog images: 2
+Percentage of correctly classified as dog: 50.0
+Percentage of correctly classified as not dog: 100.0
+Percentage of correctly classified breeds: 50.0
+Percentage of matching labels: 50.0
+
+Misclassified dogs:
+Labrador_retriever_02.jpg: 'labrador retriever' misclassified as 'gazelle'
+
+No misclassified breeds
+
+** Total Elapsed Runtime: 0:0:1
