@@ -63,5 +63,7 @@ def get_pet_labels(image_dir):
     results_dic = {}
     filenames = listdir(image_dir)
     for filename in filenames:
-        results_dic[filename] = [label(filename)]
+        # ignore hidden files
+        if not filename.startswith('.'):
+            results_dic[filename] = [label(filename)]
     return results_dic
